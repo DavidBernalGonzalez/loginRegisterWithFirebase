@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "login-e7133": {
+      "hosting": {
+        "login-app": [
+          "login-e7133"
+        ]
+      }
+    }
+  }
+}
