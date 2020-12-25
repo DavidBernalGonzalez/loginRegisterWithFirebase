@@ -4,7 +4,7 @@
   </video> -->
   <div class="inner-container">
     <video class="bgvid inner" autoplay="autoplay" muted="muted" preload="auto" loop>
-      <source src="../../assets/sea.mp4" type="video/mp4" >
+      <source src="../../assets/videos/sea.mp4" type="video/mp4" >
     </video>
     <!-- <div class="boxTop">
       <h1>Push play and clouse your eyes</h1>
@@ -17,13 +17,19 @@
           <!-- Email -->
           <input type="text" placeholder="Email" formControlName="email"/>
           <!-- ! Email Validation Messages -->
-          <div *ngIf="loginForm.get('email')?.invalid && (formSubmitted || loginForm.get('email')?.dirty)" class="errorTxt">
-            Email required
+          <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched" class="errorTxt">
+            <p *ngIf="loginForm.get('email')?.errors?.required === true">
+              Email required
+            </p>
+            <p *ngIf="loginForm.get('email')?.errors?.pattern">
+              Email not valid
+            </p>
+
           </div>
           <!-- Password -->
           <input type="password" placeholder="Password"  formControlName="password"/>
           <!-- ! Password Validation Messages -->
-          <div *ngIf="loginForm.get('password')?.invalid && formSubmitted" class="errorTxt">
+          <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched" class="errorTxt">
             Password required
           </div>
           <button type="submit">Login</button>

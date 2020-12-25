@@ -7,6 +7,6 @@ import { Component} from '@angular/core';
 })
 export class AppComponent {
   title = 'LoginApp';
-  opened = true;
+  showMenuNav = false;
   login = false;
 }

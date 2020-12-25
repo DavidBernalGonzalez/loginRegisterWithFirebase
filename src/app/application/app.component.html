@@ -1,7 +1,7 @@
 <mat-sidenav-container fullscreen>
   <!-- fullscreen -->
   <!-- SideNav Menu -->
-  <mat-sidenav #sidenav mode="side" [(opened)]="opened" class="menuSideNav">
+  <mat-sidenav #sidenav mode="side" [(opened)]="showMenuNav" class="menuSideNav">
     <!-- Home option SideNav Menu-->
     <button mat-icon-button [routerLink]='' class="example-icon-right" aria-label="Example icon-button with menu icon">
       <mat-icon class="icon-menu" aria-hidden="false" aria-label="Home icon">home</mat-icon>
@@ -25,7 +25,7 @@
       <mat-icon>menu</mat-icon>
     </button>
     <span> {{title}}</span>
-    <div class="test" [ngClass]="opened ? 'transaction': 'transaction'" [style.width]="opened ? '87.5%': '45%'">
+    <div class="test" [ngClass]="showMenuNav ? 'transaction': 'transaction'" [style.width]="showMenuNav ? '87.5%': '45%'">
       <button mat-icon-button class="example-icon-right" aria-label="Example icon-button with menu icon">
         <mat-icon class="example-icon-right" aria-hidden="false" aria-label="Example heart icon">home</mat-icon>
       </button>

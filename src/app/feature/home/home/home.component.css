@@ -3,7 +3,8 @@ video {
   width: 100vw;
   height: 100vh;
   position: fixed;
-  top: 0;
+  /* If you will take the menu side show this property */
+  /* top: 0; */
   left: 0;
 }
 
