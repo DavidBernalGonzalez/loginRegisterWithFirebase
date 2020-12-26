@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {ViewEncapsulation} from '@angular/core';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 export class HomeComponent implements OnInit {
   loginForm: FormGroup;
@@ -18,7 +20,12 @@ export class HomeComponent implements OnInit {
           Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$'),
         ],
       ],
-      password: ['', [Validators.required]],
+      password: ['',
+        [
+          Validators.required,
+          Validators.minLength(6)
+        ],
+      ],
     });
     console.log(this.loginForm);
   }

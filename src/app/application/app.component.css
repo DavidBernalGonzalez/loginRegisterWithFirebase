@@ -38,3 +38,7 @@ mat-sidenav-content{
  z-index: 2;
 }*/
 
+.mat-drawer-content{
+  overflow: inherit;
+}
+
