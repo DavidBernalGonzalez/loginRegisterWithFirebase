@@ -1,51 +1,41 @@
-/* SMALL SCREEN (max-width: 961px) and (min-width: 767px)*   →  (Ipad)*/
+
+/* SMALL SCREEN (max-width: 961px) and (min-width: 767px)*   →  (Mobile)*/
 @media screen and (max-width: 961px) {
-  .box{
+  .box {
     position: absolute;
-    display: flex;
-    height: 100%;
-    width: 100%;
-    font-family: Helvetica;
-    color: #fff;
-    padding: 0px;
-    justify-content: center;
+  }
+
+  mat-sitenav{
+    visibility: none;
   }
 }
 
-/* SMALL SCREEN (max-width: 961px) and (min-width: 767px)*   →  (Ipad)*/
+/* OTHERS SCREENS (min-width: 767px)*   →  (Ipad, Computer)*/
 @media screen and (min-width: 962px) {
   .box {
     position: fixed;
-    display: flex;
-    height: 100%;
-    width: 100%;
-    font-family: Helvetica;
-    color: #fff;
-    /* background:rgba(0,0,0,0.13); */
-    padding: 30px 0px;
-    justify-content: center;
   }
 }
 
-.errorTxt {
-  color: red;
-  text-align: center;
-}
-
-/* .boxTop {
-  position: absolute;
+.box {
   display: flex;
-  font-family: Helvetica;
-  color: #fff;
-  justify-content: center;
+  height: 100%;
   width: 100%;
-} */
-
-.box h1 {
-  text-align: center;
-  margin: 30px 0;
-  font-size: 30px;
+  font-family: Helvetica;
+  color: #000000;
+  padding: 0px;
+  justify-content: center;
 }
+
+.box .form {
+  min-width: 250px;
+  align-self: center;
+  border: 5px solid white;
+  border-radius: 5px;
+  background-color: lightblue;
+  opacity: 0.89;
+}
+
 .box input {
   display: block;
   max-width: 150px;
@@ -56,14 +46,7 @@
   border: 0;
 }
 
-.box input:focus,
-.box input:active,
-.box button:focus,
-.box button:active {
-  border: 1px solid black;
-}
 .box button {
-  background: #2ecc71;
   border: 0;
   color: #fff;
   padding: 10px;
@@ -74,27 +57,29 @@
   width: 180px;
 }
 
-.box button:active {
+.box button[type=submit]{
   background: #27ae60;
+}
+
+.box button[type=submit]:active {
+  border: 1px solid black;
+}
+
+.box input:focus,
+.box input:active,
+.box button:focus,
+.box button:active {
+  border: 1px solid black;
 }
 
 .box p {
   font-size: 14px;
   text-align: center;
 }
+
 .box p span {
   cursor: pointer;
   color: blue;
-}
-
-.box .form {
-  background-color: dimgray;
-  opacity: 0.89;
-  /* width: 20%; */
-  min-width: 250px;
-  align-self: center;
-  border: 5px solid white;
-  border-radius: 5px;
 }
 
 .center {
@@ -102,7 +87,7 @@
   justify-content: space-evenly;
   padding-bottom: 15px;
 }
-
+/* Icons of login with Facebook, Twitter, GitHub & Google hover on change */
 #facebook:hover {
   content: url("../../../../../assets/icons/facebook2.png");
 }
@@ -117,4 +102,50 @@
 
 #google:hover {
   content: url("../../../../../assets/icons/google2.png");
+}
+
+.example-container .mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}
+.example-container{
+  display: flex;
+  justify-content: center;
+  margin-top: 17.5px;
+  padding-bottom: 10px;
+}
+
+.example-container .mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}
+
+.example-right-align {
+  text-align: right;
+}
+
+input.example-right-align::-webkit-outer-spin-button,
+input.example-right-align::-webkit-inner-spin-button {
+  display: none;
+}
+
+input.example-right-align {
+  -moz-appearance: textfield;
+}
+
+.mat-icon{
+  background-color: inherit !important;
+}
+
+.mat-input-element{
+  width: 100%;
+}
+
+.mat-form-field {
+  width: 100%;
+  padding: 0 20px;
+}
+
+.mat-icon{
+  color: black;
+  margin-left: -30px;
+  font-size: 116%;
 }

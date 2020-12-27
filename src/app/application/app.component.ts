@@ -6,7 +6,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'LoginApp';
+  title = 'MeditationApp';
   showMenuNav = false;
   login = false;
 }
