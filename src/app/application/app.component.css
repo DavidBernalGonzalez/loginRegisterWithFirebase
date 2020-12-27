@@ -1,3 +1,10 @@
+/* SMALL SCREEN (max-width: 961px) and (min-width: 767px)*   →  (Ipad)*/
+@media screen and (max-width: 961px) {
+  .mat-drawer-content{
+    display: none;
+  }
+}
+
 #titleMenu{
   padding-right: 0px;
   position: absolute;
@@ -28,17 +35,15 @@ a {
 
 mat-sidenav a{
   margin-top: -10px;
+  width: 100%;
 }
 
-/* mat-sidenav-container{
-  z-index: 2;
-}
-
-mat-sidenav-content{
- z-index: 2;
-}*/
 
 .mat-drawer-content{
   overflow: inherit;
+}
+
+mat-sidenav-container{
+  position: initial;
 }
 

@@ -1,4 +1,4 @@
-<mat-sidenav-container fullscreen>
+<mat-sidenav-container>
   <!-- fullscreen -->
   <!-- SideNav Menu -->
   <mat-sidenav #sidenav mode="side" [(opened)]="showMenuNav" class="menuSideNav">
@@ -41,14 +41,12 @@
           login</mat-icon>
       </button>
     </div>
-    <!-- The routing component is load here-->
-    <router-outlet></router-outlet>
   </mat-sidenav-content>
   <!-- Menu on click in icon User -->
   <mat-menu #testMenu="matMenu">
     <button mat-menu-item> Profile </button>
     <button mat-menu-item> Logout </button>
   </mat-menu>
-
-
 </mat-sidenav-container>
+<!-- The routing component is load here-->
+<router-outlet></router-outlet>

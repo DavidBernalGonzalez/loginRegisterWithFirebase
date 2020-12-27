@@ -11,44 +11,7 @@
       <br>
       <img src="../../../../assets/icons/mute--v1.png" alt="" onclick="music()">
     </div> -->
-    <div class="box">
-      <div class="form">
-        <form [formGroup]="loginForm" (ngSubmit)="submitForm()">
-          <!-- Email -->
-          <input type="text" placeholder="Email" formControlName="email"/>
-          <!-- ! Email Validation Messages -->
-          <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched" class="errorTxt">
-            <p *ngIf="loginForm.get('email')?.errors?.required">
-              Email required
-            </p>
-            <p *ngIf="loginForm.get('email')?.errors?.pattern">
-              Email not valid
-            </p>
-
-          </div>
-          <!-- Password -->
-          <input type="password" placeholder="Password"  formControlName="password"/>
-          <!-- ! Password Validation Messages -->
-          <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched" class="errorTxt">
-            <p *ngIf="loginForm.get('password')?.errors?.required">
-              Password required
-            </p>
-            <p *ngIf="loginForm.get('password')?.errors?.minlength">
-              Password min length 6 caracters
-            </p>
-          </div>
-          <button type="submit">Login</button>
-          <!-- TODO: Conect started sesión with acounts Firebase this icons -->
-          <div class="center">
-            <img src="../../../../assets/icons/facebook.png" alt="Facebook" id="facebook">
-            <img src="../../../../assets/icons/twitter.png" alt="Twitter" id="twitter">
-            <img src="../../../../assets/icons/github.png" alt="GitHub" id="github">
-            <img src="../../../../assets/icons/google.png" alt="Google" id="google">
-          </div>
-        </form>
-        <p>Not a member? <span>Sign Up</span></p>
-      </div>
-    </div>
+    <app-login></app-login>
   </div>
 </div>
 
