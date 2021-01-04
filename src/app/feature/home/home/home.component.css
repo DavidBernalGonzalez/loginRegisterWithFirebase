@@ -1,4 +1,4 @@
-/* SMALL SCREEN (max-width: 961px) and (min-width: 767px)*   →  (Ipad)*/
+/* SMALL SCREEN (max-width: 961px) */
 @media screen and (max-width: 961px) {
   video {
     top: 0;

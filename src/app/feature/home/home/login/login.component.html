@@ -42,10 +42,18 @@
       <button mat-flat-button type="submit">Login</button>
       <!-- TODO: Conect started sesión with acounts Firebase this icons -->
       <div class="center">
-        <img src="../../../../assets/icons/facebook.png" alt="Facebook" id="facebook">
-        <img src="../../../../assets/icons/twitter.png" alt="Twitter" id="twitter">
-        <img src="../../../../assets/icons/github.png" alt="GitHub" id="github">
-        <img src="../../../../assets/icons/google.png" alt="Google" id="google">
+        <!-- Facebook Icon -->
+        <img [src]="icons.facebook.url" (mouseover)="icons.facebook.url = icons.facebook.hoverUrl"
+        (mouseout)="icons.facebook.url = icons.facebook.defaultUrl">
+        <!-- Twitter Icon -->
+        <img [src]="icons.twitter.url" (mouseover)="icons.twitter.url = icons.twitter.hoverUrl"
+        (mouseout)="icons.twitter.url = icons.twitter.defaultUrl">
+        <!-- GitHub Icon -->
+        <img [src]="icons.github.url" (mouseover)="icons.github.url = icons.github.hoverUrl"
+        (mouseout)="icons.github.url = icons.github.defaultUrl">
+        <!-- Twitter Icon -->
+        <img [src]="icons.google.url" (mouseover)="icons.google.url = icons.google.hoverUrl"
+        (mouseout)="icons.google.url = icons.google.defaultUrl">
       </div>
     </form>
     <p>Not a member? <span>Sign Up</span></p>
