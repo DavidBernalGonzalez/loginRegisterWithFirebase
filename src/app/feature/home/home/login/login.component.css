@@ -1,11 +1,10 @@
-
 /* SMALL SCREEN (max-width: 961px) and (min-width: 767px)*   →  (Mobile)*/
 @media screen and (max-width: 961px) {
   .box {
     position: absolute;
   }
 
-  mat-sitenav{
+  mat-sitenav {
     visibility: none;
   }
 }
@@ -27,7 +26,7 @@
   justify-content: center;
 }
 
-.box .form {
+.form {
   min-width: 250px;
   align-self: center;
   border: 5px solid white;
@@ -36,7 +35,7 @@
   opacity: 0.89;
 }
 
-.box input {
+.box .form form input {
   display: block;
   max-width: 150px;
   margin: 20px auto 10px auto;
@@ -46,7 +45,7 @@
   border: 0;
 }
 
-.box button {
+.box .form form button {
   border: 0;
   color: #fff;
   padding: 10px;
@@ -57,18 +56,18 @@
   width: 180px;
 }
 
-.box button[type=submit]{
+.box .form form button[type="submit"] {
   background: #27ae60;
 }
 
-.box button[type=submit]:active {
+.box .form form button[type="submit"]:active {
   border: 1px solid black;
 }
 
-.box input:focus,
-.box input:active,
-.box button:focus,
-.box button:active {
+.box .form form input:focus,
+.box .form form input:active,
+.box .form form button:focus,
+.box .form form button:active {
   border: 1px solid black;
 }
 
@@ -87,6 +86,7 @@
   justify-content: space-evenly;
   padding-bottom: 15px;
 }
+
 /* Icons of login with Facebook, Twitter, GitHub & Google hover on change */
 #facebook:hover {
   content: url("../../../../../assets/icons/facebook2.png");
@@ -107,7 +107,7 @@
 .example-container .mat-form-field + .mat-form-field {
   margin-left: 8px;
 }
-.example-container{
+.example-container {
   display: flex;
   justify-content: center;
   margin-top: 17.5px;
@@ -131,11 +131,11 @@ input.example-right-align {
   -moz-appearance: textfield;
 }
 
-.mat-icon{
+.mat-icon {
   background-color: inherit !important;
 }
 
-.mat-input-element{
+.mat-input-element {
   width: 100%;
 }
 
@@ -144,7 +144,7 @@ input.example-right-align {
   padding: 0 20px;
 }
 
-.mat-icon{
+.mat-icon {
   color: black;
   margin-left: -30px;
   font-size: 116%;
