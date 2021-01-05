@@ -1,3 +1,4 @@
+import { AuthService } from './../../../../shared/services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import {
   FormBuilder,
@@ -42,8 +43,7 @@ export class LoginComponent implements OnInit {
       url: '../../../../assets/icons/github.png',
       defaultUrl: '../../../../assets/icons/github.png',
       hoverUrl: '../../../../assets/icons/github2.png'
-    }
-    ,
+    },
     google: {
       url: '../../../../assets/icons/google.png',
       defaultUrl: '../../../../assets/icons/google.png',
@@ -51,8 +51,7 @@ export class LoginComponent implements OnInit {
     }
   };
 
-
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder, public authService: AuthService) {
     this.loginForm = this.formBuilder.group({
       email: [
         '',
@@ -64,15 +63,17 @@ export class LoginComponent implements OnInit {
       ],
       password: ['', [Validators.required, Validators.minLength(6)]],
     });
-    console.log(this.loginForm);
   }
 
   submitForm(): void {
     this.loginForm.markAllAsTouched();
     if (this.loginForm.valid) {
+      const email = this.loginForm.get('email')?.value;
+      const password = this.loginForm.get('password')?.value;
+      console.log(email);
+      console.log(password);
       // !Send data to server
-      console.log(this.loginForm);
-      // this.loginForm.reset();
+      console.log(this.authService.onLoginWithEmail(email, password));
     }
   }
 

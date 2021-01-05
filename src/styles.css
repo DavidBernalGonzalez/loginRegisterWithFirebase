@@ -3,3 +3,12 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+/* Change background of snack bar Material message when not correctly user */
+snack-bar-container{
+  border: 2px solid red;
+}
+
+/* Change snackBar Material color of button text go to register when not correctly user */
+snack-bar-container .mat-simple-snackbar-action{
+  color: black;
+}

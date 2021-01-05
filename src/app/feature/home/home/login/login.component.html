@@ -6,7 +6,7 @@
       <div class="example-container">
         <mat-form-field appearance="fill">
           <mat-label>Enter your email</mat-label>
-          <input matInput placeholder="pat@gmail.com" formControlName="email" required>
+          <input matInput formControlName="email" required>
           <!-- ! Email Validation Messages -->
           <mat-error *ngIf="loginForm.get('email')?.invalid">
             <p *ngIf="loginForm.get('email')?.errors?.required">
@@ -44,7 +44,7 @@
       <div class="center">
         <!-- Facebook Icon -->
         <img [src]="icons.facebook.url" (mouseover)="icons.facebook.url = icons.facebook.hoverUrl"
-        (mouseout)="icons.facebook.url = icons.facebook.defaultUrl">
+        (mouseout)="icons.facebook.url = icons.facebook.defaultUrl" (click)="authService.onLoginWithFacebook()">
         <!-- Twitter Icon -->
         <img [src]="icons.twitter.url" (mouseover)="icons.twitter.url = icons.twitter.hoverUrl"
         (mouseout)="icons.twitter.url = icons.twitter.defaultUrl">
