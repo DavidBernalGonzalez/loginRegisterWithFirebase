@@ -5,6 +5,7 @@
   }
 }
 
+
 video {
   object-fit: cover;
   width: 100vw;
@@ -13,4 +14,6 @@ video {
   /* If you will take the menu side show this property */
   /* top: 0; */
   left: 0;
+  position: 0% 50%;
+
 }

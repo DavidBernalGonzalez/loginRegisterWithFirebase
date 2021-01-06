@@ -32,7 +32,7 @@ export class AuthService {
 
   async onLoginWithEmail(email: string, password: string): Promise<any> {
     try {
-      console.log('Verificando user y password en firebase...');
+      console.log('Email&password login...');
       this.afAuth
         .signInWithEmailAndPassword(email, password)
         .then((response) => {
@@ -53,9 +53,76 @@ export class AuthService {
     // Create App and asociate your account paste ID App + Secret App in Firebase and paste URI OAuth in Facebook App
   async onLoginWithFacebook(): Promise<any> {
     try {
-      console.log('Verificando user y password en firebase...');
+      console.log('Facebook login...');
       this.afAuth
         .signInWithPopup(new firebase.auth.FacebookAuthProvider())
+        .then((response) => {
+          console.log(response);
+          this.router.navigate(['/welcome']);
+        })
+        .catch((err) => {
+          console.log(err);
+          this.openSnackBar('Error in login! Try other time or go to ', 'Register', '/register');
+        });
+    } catch (err) {
+      return err;
+    }
+  }
+
+  // ! TODO: Waiting verification of API twitter
+  // Sign in with Twitter
+  // Go to https://developer.twitter.com/en/apps
+  // Create App and asociate your account paste ID App + Secret App in Firebase and paste URI OAuth in Facebook App
+  async onLoginWithTwitter(): Promise<any> {
+    try {
+      console.log('Twitter login...');
+      this.afAuth
+        .signInWithPopup(new firebase.auth.TwitterAuthProvider())
+        .then((response) => {
+          console.log(response);
+          this.router.navigate(['/welcome']);
+        })
+        .catch((err) => {
+          console.log(err);
+          this.openSnackBar('Error in login! Try other time or go to ', 'Register', '/register');
+        });
+    } catch (err) {
+      return err;
+    }
+  }
+
+  // Sign in with GitHub
+  // Go to https://docs.github.com/en/free-pro-team@latest/developers/apps/building-oauth-apps
+  // In your acount user go to Settings > Developers Settings > OAuth Apps > Register a new application
+  // Create App and paste ID App + Generate a new client secret in Firebase and paste URI OAuth in GitHub App
+  async onLoginWithGitHub(): Promise<any> {
+    try {
+      console.log('Twitter login...');
+      this.afAuth
+        .signInWithPopup(new firebase.auth.GithubAuthProvider())
+        .then((response) => {
+          console.log(response);
+          this.router.navigate(['/welcome']);
+        })
+        .catch((err) => {
+          console.log(err);
+          this.openSnackBar('Error in login! Try other time or go to ', 'Register', '/register');
+        });
+    } catch (err) {
+      return err;
+    }
+  }
+
+  // Sign in with Google
+  // Go to https://console.developers.google.com/apis/credentials
+  // And go to Crear credenciales > Id de cliente de OAuth
+  // Credenciales > Clave de API o IDs de cliente de OAuth 2.0
+  // And paste ID App in Firebase
+  async onLoginWithGoogle(): Promise<any> {
+    try {
+      console.log('Twitter login...');
+      this.afAuth
+        .signInWithPopup(new firebase.auth.GoogleAuthProvider())
         .then((response) => {
           console.log(response);
           this.router.navigate(['/welcome']);

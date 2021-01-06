@@ -47,13 +47,13 @@
         (mouseout)="icons.facebook.url = icons.facebook.defaultUrl" (click)="authService.onLoginWithFacebook()">
         <!-- Twitter Icon -->
         <img [src]="icons.twitter.url" (mouseover)="icons.twitter.url = icons.twitter.hoverUrl"
-        (mouseout)="icons.twitter.url = icons.twitter.defaultUrl">
+        (mouseout)="icons.twitter.url = icons.twitter.defaultUrl" (click)="authService.onLoginWithTwitter()">
         <!-- GitHub Icon -->
         <img [src]="icons.github.url" (mouseover)="icons.github.url = icons.github.hoverUrl"
-        (mouseout)="icons.github.url = icons.github.defaultUrl">
+        (mouseout)="icons.github.url = icons.github.defaultUrl" (click)="authService.onLoginWithGitHub()">
         <!-- Twitter Icon -->
         <img [src]="icons.google.url" (mouseover)="icons.google.url = icons.google.hoverUrl"
-        (mouseout)="icons.google.url = icons.google.defaultUrl">
+        (mouseout)="icons.google.url = icons.google.defaultUrl" (click)="authService.onLoginWithGoogle()">
       </div>
     </form>
     <p>Not a member? <span>Sign Up</span></p>
