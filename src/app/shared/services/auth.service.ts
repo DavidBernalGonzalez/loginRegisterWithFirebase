@@ -72,19 +72,6 @@ export class AuthService {
     }
   }
 
-  // ! TODO: Waiting verification of API twitter
-  // Sign in with Twitter
-  // Go to https://developer.twitter.com/en/apps
-  // Create App and asociate your account paste ID App + Secret App in Firebase and paste URI OAuth in Facebook App
-  onLoginWithTwitter(): void {
-    try {
-      console.log('Try to loggin with Twitter...');
-      this.loggin(new firebase.auth.TwitterAuthProvider());
-    } catch (err) {
-      return err;
-    }
-  }
-
   // Sign in with GitHub
   // Go to https://docs.github.com/en/free-pro-team@latest/developers/apps/building-oauth-apps
   // In your acount user go to Settings > Developers Settings > OAuth Apps > Register a new application
