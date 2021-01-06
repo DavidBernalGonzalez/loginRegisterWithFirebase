@@ -29,7 +29,7 @@
             <mat-icon>{{showPassword ? 'visibility_off' : 'visibility'}}</mat-icon>
           </span>
           <!-- ! Password Validation Messages -->
-          <mat-error *ngIf="loginForm.get('email')?.invalid">
+          <mat-error *ngIf="loginForm.get('password')?.invalid">
             <p *ngIf="loginForm.get('password')?.errors?.required">
               Password required
             </p>
