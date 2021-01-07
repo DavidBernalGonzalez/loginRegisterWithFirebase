@@ -76,9 +76,10 @@
   text-align: center;
 }
 
-.box p span {
+.box p a {
   cursor: pointer;
   color: blue;
+  text-decoration: none;
 }
 
 .center {

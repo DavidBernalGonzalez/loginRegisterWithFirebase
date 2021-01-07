@@ -12,14 +12,15 @@ import {
   providedIn: 'root',
 })
 export class AuthService {
+  horizontalPosition: MatSnackBarHorizontalPosition = 'center';
+  verticalPosition: MatSnackBarVerticalPosition = 'bottom';
+  public token = '';
+
   constructor(
     public afAuth: AngularFireAuth,
     public router: Router,
     private snackBar: MatSnackBar
   ) {}
-
-  horizontalPosition: MatSnackBarHorizontalPosition = 'center';
-  verticalPosition: MatSnackBarVerticalPosition = 'bottom';
 
   openSnackBar(message: string, action: string, route: string): void {
     const snack = this.snackBar.open(message, action, {
@@ -45,6 +46,13 @@ export class AuthService {
         .signInWithEmailAndPassword(email, password)
         .then((response) => {
           console.log(response);
+
+          // Saving the token
+          response.user?.getIdToken().then((token) => {
+            console.log(token);
+            this.token = token;
+            localStorage.setItem('accessToken', token);
+          });
           this.router.navigate(['/welcome']);
         })
         .catch((err) => {

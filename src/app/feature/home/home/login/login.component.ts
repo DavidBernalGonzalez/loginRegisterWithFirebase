@@ -70,10 +70,9 @@ export class LoginComponent implements OnInit {
     if (this.loginForm.valid) {
       const email = this.loginForm.get('email')?.value;
       const password = this.loginForm.get('password')?.value;
-      console.log(email);
-      console.log(password);
+
       // !Send data to server
-      console.log(this.authService.onLoginWithEmail(email, password));
+      this.authService.onLoginWithEmail(email, password);
     }
   }
 

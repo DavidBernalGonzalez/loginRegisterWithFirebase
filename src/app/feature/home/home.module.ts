@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { SharedModule } from './../../shared/shared.module';
 import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
@@ -12,7 +13,8 @@ import { WelcomeComponent } from './home/welcome/welcome.component';
   imports: [
     CommonModule,
     SharedModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule
   ],
   exports: [
     HomeComponent
