@@ -24,13 +24,47 @@
   color: #000000;
   padding: 0px;
   justify-content: center;
+  font-family: 'Source Code Pro', sans-serif;
+}
+
+.test{
+  /* https://codepen.io/cecilehabran/pen/EvRamr */
+  font-size: 3rem;
+    line-height: 1.35;
+    display: inline;
+    box-decoration-break: clone;
+    background: #fff;
+    padding: 0.5rem 1rem;
+    filter: url('#goo');
 }
 
 .form {
-  min-width: 250px;
-  align-self: center;
   border: 5px solid white;
   border-radius: 5px;
-  background-color: lightblue;
+  width: 375px;
+  height: 225px;
+  align-self: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 40px;
+  padding: 40px;
   opacity: 0.89;
+  /* background-color: lightblue; */
+  backdrop-filter: blur(30px);    /* Effect transparency */
+}
+
+h1{
+  font-size: 3.5rem;
+  margin: 5px;
+}
+
+h2{
+  font-size: 2rem;
+}
+
+.mat-stroked-button{
+  background-color: #fafafa;
+  border: 1px solid black;
 }

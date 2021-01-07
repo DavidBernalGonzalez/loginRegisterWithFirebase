@@ -31,8 +31,9 @@
   align-self: center;
   border: 5px solid white;
   border-radius: 5px;
-  background-color: lightblue;
   opacity: 0.89;
+  /* background-color: lightblue; */
+  backdrop-filter: blur(30px);    /* Effect transparency */
 }
 
 .box .form form input {
