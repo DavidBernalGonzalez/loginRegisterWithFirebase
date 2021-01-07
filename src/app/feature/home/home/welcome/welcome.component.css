@@ -7,12 +7,55 @@
   mat-sitenav {
     visibility: none;
   }
+
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  /* https://codepen.io/cecilehabran/pen/EvRamr */
+  /* https://codepen.io/ines/pen/NXbmRO */
+  .form {
+    font-size: 1.85rem;
+    line-height: 1.35;
+    /* background: aliceblue; */
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    width: 250px;
+    height: 200px;
+  }
 }
 
 /* OTHERS SCREENS (min-width: 767px)*   →  (Ipad, Computer)*/
 @media screen and (min-width: 962px) {
   .box {
     position: fixed;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    margin: 5px;
+    background-color: red;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .form {
+    border-radius: 5px;
+    width: 375px;
+    height: 225px;
+    align-self: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 40px;
+    padding: 40px;
+    opacity: 0.89;
+    /* background-color: lightblue; */
+    backdrop-filter: blur(30px); /* Effect transparency */
   }
 }
 
@@ -24,11 +67,11 @@
   color: #000000;
   padding: 0px;
   justify-content: center;
-  font-family: 'Source Code Pro', sans-serif;
 }
+/* https://codepen.io/cecilehabran/pen/EvRamr */
+/* https://codepen.io/ines/pen/NXbmRO */
+/* .test{
 
-.test{
-  /* https://codepen.io/cecilehabran/pen/EvRamr */
   font-size: 3rem;
     line-height: 1.35;
     display: inline;
@@ -36,13 +79,17 @@
     background: #fff;
     padding: 0.5rem 1rem;
     filter: url('#goo');
+} */
+
+.mat-stroked-button {
+  background-color: #fafafa;
+  border: 1px solid black;
+  font-size: large;
 }
 
-.form {
+.form{
   border: 5px solid white;
   border-radius: 5px;
-  width: 375px;
-  height: 225px;
   align-self: center;
   text-align: center;
   display: flex;
@@ -52,19 +99,6 @@
   padding: 40px;
   opacity: 0.89;
   /* background-color: lightblue; */
-  backdrop-filter: blur(30px);    /* Effect transparency */
-}
-
-h1{
-  font-size: 3.5rem;
-  margin: 5px;
-}
-
-h2{
-  font-size: 2rem;
-}
-
-.mat-stroked-button{
-  background-color: #fafafa;
+  backdrop-filter: blur(30px); /* Effect transparency */
   border: 1px solid black;
 }
