@@ -1,0 +1,77 @@
+/* SMALL SCREEN (max-width: 961px) and (min-width: 767px)*   →  (Mobile)*/
+@media screen and (max-width: 961px) {
+  .box {
+    position: absolute;
+  }
+
+  mat-sitenav {
+    visibility: none;
+  }
+}
+
+/* OTHERS SCREENS (min-width: 767px)*   →  (Ipad, Computer)*/
+@media screen and (min-width: 962px) {
+  .box {
+    position: fixed;
+  }
+}
+
+.box {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  font-family: Helvetica;
+  color: #000000;
+  padding: 0px;
+  justify-content: center;
+}
+
+.form {
+  min-width: 250px;
+  align-self: center;
+  border: 5px solid white;
+  border-radius: 5px;
+  background-color: lightblue;
+  opacity: 0.89;
+}
+
+.box .form form input {
+  display: block;
+  max-width: 150px;
+  margin: 20px auto 10px auto;
+  padding: 15px;
+  background: white;
+  color: black;
+  border: 0;
+}
+
+.box .form form button {
+  border: 0;
+  color: #fff;
+  padding: 10px;
+  font-size: 20px;
+  margin: 20px auto;
+  display: block;
+  cursor: pointer;
+  width: 180px;
+}
+
+.box .form form button[type="submit"] {
+  background: #27ae60;
+}
+
+.box .form form button[type="submit"]:active {
+  border: 1px solid black;
+}
+
+.box .form form input:focus,
+.box .form form input:active,
+.box .form form button:focus,
+.box .form form button:active {
+  border: 1px solid black;
+}
+
+.box p {
+  font-size: 14px;
+  text-align: center;
+}

@@ -1,0 +1,36 @@
+/* SMALL SCREEN (max-width: 961px) and (min-width: 767px)*   →  (Mobile)*/
+@media screen and (max-width: 961px) {
+  .box {
+    position: absolute;
+  }
+
+  mat-sitenav {
+    visibility: none;
+  }
+}
+
+/* OTHERS SCREENS (min-width: 767px)*   →  (Ipad, Computer)*/
+@media screen and (min-width: 962px) {
+  .box {
+    position: fixed;
+  }
+}
+
+.box {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  font-family: Helvetica;
+  color: #000000;
+  padding: 0px;
+  justify-content: center;
+}
+
+.form {
+  min-width: 250px;
+  align-self: center;
+  border: 5px solid white;
+  border-radius: 5px;
+  background-color: lightblue;
+  opacity: 0.89;
+}

@@ -53,12 +53,12 @@ export class AuthService {
             this.token = token;
             localStorage.setItem('accessToken', token);
           });
-          this.router.navigate(['/welcome']);
+          this.router.navigate(['/loged']);
         })
         .catch((err) => {
           console.log(err);
           this.openSnackBar(
-            'Error in login! Try other time or go to ',
+            'Login Error! Try again or go to ',
             'Register',
             '/register'
           );
@@ -114,12 +114,12 @@ export class AuthService {
         .then((response) => {
           console.log(response);
           console.log('Login sucess');
-          this.router.navigate(['/welcome']);
+          this.router.navigate(['/loged']);
         })
         .catch((err) => {
           console.log(err);
           this.openSnackBar(
-            'Error in login! Try other time or go to ',
+            'Login Error! Try again or go to ',
             'Register',
             '/register'
           );
