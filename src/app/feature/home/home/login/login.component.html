@@ -44,8 +44,11 @@
           </mat-error>
         </mat-form-field>
       </div>
+
+      <!-- Submit Button -->
       <button mat-flat-button type="submit">Login</button>
-      <!-- TODO: Conect started sesión with acounts Firebase this icons -->
+
+      <!-- Start sesion with -->
       <div class="center">
         <!-- Facebook Icon -->
         <img [src]="icons.facebook.url" (mouseover)="icons.facebook.url = icons.facebook.hoverUrl"
@@ -58,6 +61,8 @@
           (mouseout)="icons.google.url = icons.google.defaultUrl" (click)="authService.onLoginWithGoogle()">
       </div>
     </form>
+
+    <!-- Go to register? -->
     <p>Not a member? <a [routerLink]="['/register']">Sign Up</a></p>
   </div>
 </div>

@@ -92,7 +92,7 @@ export class RegisterComponent implements OnInit {
       const password = this.registerForm.get('password')?.value;
 
       // !Send data to server
-      this.authService.onLoginWithEmail(email, password);
+      this.authService.onRegister(email, password);
     }
   }
 

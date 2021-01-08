@@ -39,6 +39,37 @@ export class AuthService {
     });
   }
 
+    // Create account (Email Pasword)
+    // Login with Email Pasword
+  onRegister(email: string, password: string): void {
+    try {
+      console.log('Email&password login...');
+      this.afAuth
+        .createUserWithEmailAndPassword(email, password)
+        .then((response) => {
+          console.log(response);
+
+          // Saving the token
+          response.user?.getIdToken().then((token) => {
+            console.log(token);
+            this.token = token;
+            localStorage.setItem('accessToken', token);
+          });
+          this.router.navigate(['/loged']);
+        })
+        .catch((err) => {
+          console.log(err);
+          this.openSnackBar(
+            'Login Error! Try again or go to ',
+            'Register',
+            '/register'
+          );
+        });
+    } catch (err) {
+      return err;
+    }
+  }
+
   // Login with Email Pasword
   onLoginWithEmail(email: string, password: string): void {
     try {
