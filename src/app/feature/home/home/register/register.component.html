@@ -40,22 +40,25 @@
         </mat-form-field>
       </div>
 
-      <!-- Repeat Password -->
+      <!-- Confirm Pasword -->
       <div class="example-container">
         <mat-form-field appearance="fill">
-          <mat-label>Enter your password</mat-label>
-          <input matInput [type]="showPassword ? 'password' : 'text'" formControlName="password" required>
-          <span mat-icon-button matSuffix (click)="showPassword = !showPassword" [attr.aria-label]="'Hide password'"
+          <mat-label>Confirm your password</mat-label>
+          <input matInput [type]="showPasswordRepeat ? 'password' : 'text'" formControlName="passwordConfirm" required>
+          <span mat-icon-button matSuffix (click)="showPasswordRepeat = !showPasswordRepeat" [attr.aria-label]="'Hide password'"
             [attr.aria-pressed]="showPassword">
             <mat-icon>{{showPassword ? 'visibility_off' : 'visibility'}}</mat-icon>
           </span>
           <!-- ! Password Validation Messages -->
-          <mat-error *ngIf="registerForm.get('password')?.invalid">
-            <p *ngIf="registerForm.get('password')?.errors?.required">
+          <mat-error *ngIf="registerForm.get('passwordConfirm')?.invalid">
+            <p *ngIf="registerForm.get('passwordConfirm')?.errors?.required">
               Password required
             </p>
-            <p *ngIf="registerForm.get('password')?.errors?.minlength">
+            <p *ngIf="registerForm.get('passwordConfirm')?.errors?.minlength">
               Password min length 6 caracters
+            </p>
+            <p *ngIf="registerForm.get('passwordConfirm')?.errors?.matchOther">
+              Confirm Pasword not equals than password
             </p>
           </mat-error>
         </mat-form-field>

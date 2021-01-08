@@ -39,6 +39,7 @@ export class AuthService {
     });
   }
 
+  // Login with Email Pasword
   onLoginWithEmail(email: string, password: string): void {
     try {
       console.log('Email&password login...');
