@@ -39,9 +39,31 @@
           </mat-error>
         </mat-form-field>
       </div>
-      <button mat-flat-button type="submit">Login</button>
+
+      <!-- Repeat Password -->
+      <div class="example-container">
+        <mat-form-field appearance="fill">
+          <mat-label>Enter your password</mat-label>
+          <input matInput [type]="showPassword ? 'password' : 'text'" formControlName="password" required>
+          <span mat-icon-button matSuffix (click)="showPassword = !showPassword" [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="showPassword">
+            <mat-icon>{{showPassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </span>
+          <!-- ! Password Validation Messages -->
+          <mat-error *ngIf="registerForm.get('password')?.invalid">
+            <p *ngIf="registerForm.get('password')?.errors?.required">
+              Password required
+            </p>
+            <p *ngIf="registerForm.get('password')?.errors?.minlength">
+              Password min length 6 caracters
+            </p>
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <!-- Submit Button -->
+      <button mat-flat-button type="submit">Register</button>
     </form>
-    <p>Not a member? <span>Sign Up</span></p>
   </div>
 </div>
 
