@@ -7,12 +7,28 @@
   mat-sitenav {
     visibility: none;
   }
+
+  .form{
+    min-width: 250px;
+  }
+
+  .mat-icon{
+    margin-left: -30px;
+  }
 }
 
 /* OTHERS SCREENS (min-width: 767px)*   →  (Ipad, Computer)*/
 @media screen and (min-width: 962px) {
   .box {
     position: fixed;
+  }
+
+  .form{
+    min-width: 300px;
+  }
+
+  .mat-icon {
+    margin-left: -57.5px;
   }
 }
 
@@ -27,7 +43,6 @@
 }
 
 .form {
-  min-width: 250px;
   align-self: center;
   border: 1px solid black;
   border-radius: 5px;
@@ -116,10 +131,6 @@ input.example-right-align {
   -moz-appearance: textfield;
 }
 
-.mat-icon {
-  background-color: inherit !important;
-}
-
 .mat-input-element {
   width: 100%;
 }
@@ -130,9 +141,9 @@ input.example-right-align {
 }
 
 .mat-icon {
+  background-color: inherit !important;
   color: black;
-  margin-left: -30px;
   font-size: 1;
-  position: absolute;
   top: -18px;
+  position: absolute;
 }
