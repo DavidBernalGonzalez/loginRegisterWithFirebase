@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { AuthService } from './../../../../shared/services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import {
@@ -20,7 +21,8 @@ export class RegisterComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    public authService: AuthService
+    public authService: AuthService,
+    public router: Router
   ) {
     this.registerForm = this.formBuilder.group({
       email: [
@@ -95,4 +97,8 @@ export class RegisterComponent implements OnInit {
   }
 
   ngOnInit(): void {}
+
+  backToLogin(): void{
+    this.router.navigate(['/login']);
+  }
 }

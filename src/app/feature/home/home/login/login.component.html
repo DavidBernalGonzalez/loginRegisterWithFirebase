@@ -1,5 +1,10 @@
 <div class="box">
   <div class="form">
+    <!-- Arrow to back" -->
+    <span class="material-icons" (click)="backToLogin()">
+      arrow_back
+    </span>
+
     <form [formGroup]="loginForm" (ngSubmit)="submitForm()">
 
       <!-- Email -->
@@ -44,15 +49,15 @@
       <div class="center">
         <!-- Facebook Icon -->
         <img [src]="icons.facebook.url" (mouseover)="icons.facebook.url = icons.facebook.hoverUrl"
-        (mouseout)="icons.facebook.url = icons.facebook.defaultUrl" (click)="authService.onLoginWithFacebook()">
+          (mouseout)="icons.facebook.url = icons.facebook.defaultUrl" (click)="authService.onLoginWithFacebook()">
         <!-- GitHub Icon -->
         <img [src]="icons.github.url" (mouseover)="icons.github.url = icons.github.hoverUrl"
-        (mouseout)="icons.github.url = icons.github.defaultUrl" (click)="authService.onLoginWithGitHub()">
+          (mouseout)="icons.github.url = icons.github.defaultUrl" (click)="authService.onLoginWithGitHub()">
         <!-- Twitter Icon -->
         <img [src]="icons.google.url" (mouseover)="icons.google.url = icons.google.hoverUrl"
-        (mouseout)="icons.google.url = icons.google.defaultUrl" (click)="authService.onLoginWithGoogle()">
+          (mouseout)="icons.google.url = icons.google.defaultUrl" (click)="authService.onLoginWithGoogle()">
       </div>
     </form>
-    <p>Not a member? <a [routerLink] = "['/register']">Sign Up</a></p>
+    <p>Not a member? <a [routerLink]="['/register']">Sign Up</a></p>
   </div>
 </div>

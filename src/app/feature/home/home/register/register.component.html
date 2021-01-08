@@ -1,5 +1,10 @@
 <div class="box">
   <div class="form">
+    <!-- Arrow to back" -->
+    <span class="material-icons" (click)="backToLogin()">
+      arrow_back
+    </span>
+
     <form [formGroup]="registerForm" (ngSubmit)="submitForm()">
 
       <!-- Email -->
@@ -45,8 +50,8 @@
         <mat-form-field appearance="fill">
           <mat-label>Confirm your password</mat-label>
           <input matInput [type]="showPasswordRepeat ? 'password' : 'text'" formControlName="passwordConfirm" required>
-          <span mat-icon-button matSuffix (click)="showPasswordRepeat = !showPasswordRepeat" [attr.aria-label]="'Hide password'"
-            [attr.aria-pressed]="showPassword">
+          <span mat-icon-button matSuffix (click)="showPasswordRepeat = !showPasswordRepeat"
+            [attr.aria-label]="'Hide password'" [attr.aria-pressed]="showPassword">
             <mat-icon>{{showPassword ? 'visibility_off' : 'visibility'}}</mat-icon>
           </span>
           <!-- ! Password Validation Messages -->
@@ -69,4 +74,3 @@
     </form>
   </div>
 </div>
-

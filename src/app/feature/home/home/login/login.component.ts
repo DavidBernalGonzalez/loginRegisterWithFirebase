@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { AuthService } from './../../../../shared/services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import {
@@ -51,7 +52,7 @@ export class LoginComponent implements OnInit {
     }
   };
 
-  constructor(private formBuilder: FormBuilder, public authService: AuthService) {
+  constructor(private formBuilder: FormBuilder, public authService: AuthService, public router: Router) {
     this.loginForm = this.formBuilder.group({
       email: [
         '',
@@ -77,4 +78,8 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {}
+
+  backToLogin(): void{
+    this.router.navigate(['']);
+  }
 }
