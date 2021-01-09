@@ -14,7 +14,11 @@ import {
 export class AuthService {
   horizontalPosition: MatSnackBarHorizontalPosition = 'center';
   verticalPosition: MatSnackBarVerticalPosition = 'bottom';
-  public token = '';
+  private token = '';
+
+  getToken(): string {
+    return this.token;
+  }
 
   constructor(
     public afAuth: AngularFireAuth,

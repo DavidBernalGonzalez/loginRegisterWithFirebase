@@ -9,7 +9,8 @@ export class LogedComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    alert(1232);
   }
 
 }
