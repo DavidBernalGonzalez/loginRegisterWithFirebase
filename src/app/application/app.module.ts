@@ -1,3 +1,4 @@
+import { MatIconModule } from '@angular/material/icon';
 import { HomeComponent } from './../feature/home/home/home.component';
 import { HomeModule } from './../feature/home/home.module';
 import { FeatureModule } from './../feature/feature.module';

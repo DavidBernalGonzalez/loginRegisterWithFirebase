@@ -20,5 +20,5 @@ https://medium.com/@mugan86/publicar-una-aplicaci%C3%B3n-angular-en-firebase-hos
 - firebase deploy
 
 # Others deploys
-- ng build
+- ng build --prod --base-href "./"
 - firebase deploy

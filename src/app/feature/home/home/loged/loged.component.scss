@@ -1,0 +1,95 @@
+/* SMALL SCREEN (max-width: 961px) and (min-width: 767px)*   →  (Mobile)*/
+@media screen and (max-width: 961px) {
+  .box {
+    position: absolute;
+  }
+
+  mat-sitenav {
+    visibility: none;
+  }
+
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .form {
+    font-size: 1.85rem;
+    line-height: 1.35;
+    /* background: aliceblue; */
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    width: 250px;
+    height: 200px;
+  }
+}
+
+/* OTHERS SCREENS (min-width: 767px)*   →  (Ipad, Computer)*/
+@media screen and (min-width: 962px) {
+  .box {
+    position: fixed;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    margin: 10px 0 0 0;
+    line-height: normal;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin: -12px 0 10px 0;
+  }
+
+  .form {
+    font-size: 1.85rem;
+    line-height: 1.35;
+    /* background: aliceblue; */
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    width: 375px;
+    height: 220px;
+  }
+}
+
+.box {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  font-family: Helvetica;
+  color: #000000;
+  padding: 0px;
+  justify-content: center;
+}
+
+/* .mat-stroked-button {
+  background-color: #fafafa;
+  border: 1px solid rgb(109, 106, 106);
+  font-size: large;
+  margin: 12.5px 0;
+} */
+
+.form{
+  border-radius: 5px;
+  align-self: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 40px;
+  padding: 40px;
+  opacity: 0.89;
+  /* background-color: lightblue; */
+  backdrop-filter: blur(30px) opacity(0.89); /* Effect transparency */
+  border: 1px solid black;
+}
+
+.btn{
+  background-color: white;
+}
+
+.material-icons{
+  color: black;
+  font-size: 48px;
+  margin-top: -12px;
+}

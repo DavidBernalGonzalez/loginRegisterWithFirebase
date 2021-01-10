@@ -1,3 +1,19 @@
-<p>
-  loged works!
-</p>
+<div class="box">
+  <div class="form">
+    <h1>Push play and close your eyes</h1>
+    <br>
+    <h2>¿Are you ready?</h2>
+    <div class="example-button-container">
+      <button mat-fab class="btn" (click)="changeIcon()">
+        <span class="material-icons">
+          {{playOrStopIcon}}
+        </span>
+      </button>
+      <audio #audioElement>
+        <!-- https://www.zapsplat.com/sound-effect-category/ocean/ -->
+        <source type="audio/mpeg" #sourceElement>
+      Your browser does not support the audio element.
+      </audio>
+    </div>
+  </div>
+</div>
