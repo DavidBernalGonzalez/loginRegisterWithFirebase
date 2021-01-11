@@ -20,7 +20,6 @@
     padding: 0.5rem 1rem;
     font-weight: bold;
     width: 250px;
-    height: 200px;
   }
 }
 
@@ -31,7 +30,7 @@
   }
 
   h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     margin: 10px 0 0 0;
     line-height: normal;
   }
@@ -47,8 +46,6 @@
     /* background: aliceblue; */
     padding: 0.5rem 1rem;
     font-weight: bold;
-    width: 375px;
-    height: 220px;
   }
 }
 
@@ -74,10 +71,10 @@
   align-self: center;
   text-align: center;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   margin: 40px;
-  padding: 40px;
+  padding: 20px 20px 0 20px;
   opacity: 0.89;
   /* background-color: lightblue; */
   backdrop-filter: blur(30px) opacity(0.89); /* Effect transparency */
@@ -92,4 +89,36 @@
   color: black;
   font-size: 48px;
   margin-top: -12px;
+}
+
+.material-icons2{
+  font-size: 24px;
+  margin-top: 10px;
+  padding-right: 5px;
+}
+
+
+/* mat-slider */
+:host ::ng-deep .max .mat-slider-track-fill {
+  background-color: black;
+}
+:host ::ng-deep .average .mat-slider-thumb {
+  background-color: black;
+}
+
+#keyboard_left{
+  left: -20px;
+  position: relative;
+  top: 15px;
+}
+
+#keyboard_right{
+  /* left: -20px; */
+  position: relative;
+  top: 15px;
+}
+
+p{
+  font-size: 10px;
+  margin-bottom: -15px;
 }

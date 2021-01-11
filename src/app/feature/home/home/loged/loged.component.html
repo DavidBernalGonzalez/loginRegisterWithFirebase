@@ -1,19 +1,31 @@
 <div class="box">
   <div class="form">
-    <h1>Push play and close your eyes</h1>
-    <br>
-    <h2>¿Are you ready?</h2>
-    <div class="example-button-container">
-      <button mat-fab class="btn" (click)="changeIcon()">
+    <!-- <h1>Push play and close your eyes</h1> -->
+    <div>
+      <mat-icon id="keyboard_left">keyboard_arrow_left</mat-icon>
+    </div>
+    <div>
+
+      <button mat-fab class="btn" (click)="changeIconPlay()">
         <span class="material-icons">
           {{playOrStopIcon}}
         </span>
       </button>
-      <audio #audioElement>
-        <!-- https://www.zapsplat.com/sound-effect-category/ocean/ -->
-        <source type="audio/mpeg" #sourceElement>
-      Your browser does not support the audio element.
-      </audio>
+      <div>
+        <span class="material-icons material-icons2" (click)="changeIconVolume()">
+          {{iconVolume}}
+        </span>
+        <audio #audioElement>
+          <!-- https://www.zapsplat.com/sound-effect-category/ocean/ -->
+          Your browser does not support the audio element.
+        </audio>
+        <br>
+        <p>{{thumbLabel}}</p>
+        <mat-slider class="max average" min="0" max="100" value="100" (change)="onSliderChange($event)"></mat-slider>
+      </div>
+    </div>
+    <div>
+      <mat-icon id="keyboard_right">keyboard_arrow_right</mat-icon>
     </div>
   </div>
 </div>
