@@ -1,11 +1,12 @@
 <div class="box">
   <div class="form">
-    <!-- <h1>Push play and close your eyes</h1> -->
+    <!-- Button Left -->
     <div>
-      <mat-icon id="keyboard_left">keyboard_arrow_left</mat-icon>
+        <mat-icon id="keyboard_left" [style.visibility]="this.videoService.disableBtnLeft() ? 'visible' : 'hidden'" (click)="leftArrow()">keyboard_arrow_left</mat-icon>
     </div>
-    <div>
 
+    <!-- Music Player -->
+    <div>
       <button mat-fab class="btn" (click)="changeIconPlay()">
         <span class="material-icons">
           {{playOrStopIcon}}
@@ -24,8 +25,11 @@
         <mat-slider class="max average" min="0" max="100" value="100" (change)="onSliderChange($event)"></mat-slider>
       </div>
     </div>
+
+    <!-- Button Right -->
     <div>
-      <mat-icon id="keyboard_right">keyboard_arrow_right</mat-icon>
+      <!-- <mat-icon id="keyboard_right" *ngIf="this.videoService.disableBtnRight()" (click)="rightArrow()">keyboard_arrow_right</mat-icon> -->
+      <mat-icon id="keyboard_right" [style.visibility]="this.videoService.disableBtnRight() ? 'visible' : 'hidden'" (click)="rightArrow()">keyboard_arrow_right</mat-icon>
     </div>
   </div>
 </div>

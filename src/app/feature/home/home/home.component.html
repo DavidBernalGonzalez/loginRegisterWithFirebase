@@ -1,8 +1,9 @@
 <div>
   <div>
-    <video loop muted autoplay oncanplay="this.play()" onloadedmetadata="this.muted = true">
+    <video loop muted autoplay oncanplay="this.play()" onloadedmetadata="this.muted = true" #video>
       <!--Put your video in this route-->
-      <source src="../../../../assets/videos/sea.mp4" type="video/mp4">
+      <!-- https://stackoverflow.com/questions/39180415/angular-2-change-videos-src-after-clicking-on-div-->
+      <source [src]="videoUrl" type="video/mp4">
     </video>
     <!--
           https://www.pexels.com/video/a-woman-seated-on-the-beach-sand-enjoying-the-table-mountain-view-3327031/ sea
@@ -12,8 +13,6 @@
           https://www.pexels.com/video/4928679/ cows
 
         -->
-
-    <!-- <app-login></app-login> -->
     <router-outlet></router-outlet>
   </div>
 </div>
