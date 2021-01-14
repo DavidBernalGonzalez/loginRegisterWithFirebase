@@ -32,6 +32,11 @@ export class LogedComponent implements OnInit {
     // this.videoService.setVideo(this.video);
     this.videoService.url$.emit(this.videoService.getVideo(this.video));
     // alert(this.videoService.getVideo(this.video));
+    if (this.playOrStopIcon === 'pause_circle'){
+      this.audioElement.nativeElement.pause();
+      this.audioElement.nativeElement.src = this.videoService.getAudio(this.video);
+      this.audioElement.nativeElement.play();
+    }
     return this.videoService.getVideo(this.video);
   }
 
@@ -41,24 +46,24 @@ export class LogedComponent implements OnInit {
       // this.videoService.setVideo(this.video);
       this.videoService.url$.emit(this.videoService.getVideo(this.video));
       // alert(this.videoService.getVideo(this.video));
+      if (this.playOrStopIcon === 'pause_circle'){
+          this.audioElement.nativeElement.pause();
+          this.audioElement.nativeElement.src = this.videoService.getAudio(this.video);
+          this.audioElement.nativeElement.play();
+      }
     }
     return this.videoService.getVideo(this.video);
   }
 
-  ngOnInit(): void {
-    // this.videoService.btnRight$.subscribe((observer => {
-    //   this.rightButtonVisible = observer;
-    // });
-  }
+  ngOnInit(): void {}
 
   changeIconPlay(): void {
     const audio = new Audio();
     if (this.playOrStopIcon === 'play_circle') {
       this.playOrStopIcon = 'pause_circle';
-      this.audioElement.nativeElement.src =
-        '../../../../../assets/sounds/sea.mp3';
+      // this.audioElement.nativeElement.src = '../../../../../assets/sounds/sea.mp3';
+      this.audioElement.nativeElement.src = this.videoService.getAudio(this.video);
       this.audioElement.nativeElement.play();
-      console.log(this.audioElement);
     } else {
       this.playOrStopIcon = 'play_circle';
       this.audioElement.nativeElement.pause();
@@ -68,7 +73,6 @@ export class LogedComponent implements OnInit {
   changeIconVolume(): void {
     if (this.iconVolume !== 'volume_off') {
       this.oldIconVolume = this.iconVolume;
-      console.log(this.oldIconVolume);
       this.iconVolume = 'volume_off';
       this.audioElement.nativeElement.pause();
     } else {
@@ -86,7 +90,6 @@ export class LogedComponent implements OnInit {
   // https://stackblitz.com/edit/angular-mat-slider-full-options?embed=1&file=app/slider-configurable-example.html
   onSliderChange(event: MatSliderChange): void {
     if (event.value != null) {
-      console.log(event.value / 100);
       if (event.value < 50 && event.value > 25) {
         this.iconVolume = 'volume_down';
       } else if (event.value < 25) {
